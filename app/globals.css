@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@reference utilities;
+
+.header {
+  @apply bg-slate-900/80 backdrop-blur-md;
+}
+/* =========================
+   HEADER
+========================= */
+@layer components {
+
+  .header {
+    @apply sticky top-0 z-50 w-full
+           bg-slate-900/80 backdrop-blur-md
+           border-b border-slate-800;
+  }
+
+  .header-inner {
+    @apply max-w-7xl mx-auto
+           flex items-center justify-between
+           px-6 py-4;
+  }
+
+  .logo {
+    @apply text-2xl font-bold
+           text-indigo-500
+           hover:text-indigo-400
+           transition;
+  }
+
+  .nav-desktop {
+    @apply hidden md:flex
+           items-center gap-8
+           text-slate-300 font-medium;
+  }
+
+  .nav-desktop a {
+    @apply hover:text-white transition;
+  }
+
+  .cta {
+    @apply hidden md:block;
+  }
+
+  .btn {
+    @apply bg-indigo-600 hover:bg-indigo-500
+           px-5 py-2 rounded-lg
+           font-semibold transition shadow-md;
+  }
+
+  .menu-btn {
+    @apply md:hidden text-2xl
+           text-slate-300 hover:text-white
+           transition;
+  }
+
+  .nav-mobile {
+    @apply md:hidden flex flex-col gap-4
+           px-6 pb-6 bg-slate-900
+           border-t border-slate-800;
+  }
+
+  .nav-mobile a {
+    @apply text-slate-300 hover:text-white transition;
+  }
+
+  /* =========================
+     GENERAL SECTIONS
+  ========================= */
+
+  .section {
+    @apply py-20 px-[10%];
+  }
+
+  .section.alt {
+    @apply bg-slate-900;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-center mb-10;
+  }
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero {
+    @apply min-h-[90vh] flex items-center justify-center text-center
+           px-[10%]
+           bg-gradient-to-br from-slate-800 to-slate-950;
+  }
+
+  .hero-content h1 {
+    @apply text-5xl font-bold mb-5;
+  }
+
+  .hero-content p {
+    @apply text-lg text-slate-400 max-w-2xl mx-auto mb-8;
+  }
+
+  .hero-buttons {
+    @apply flex justify-center gap-5 flex-wrap;
+  }
+
+  /* =========================
+     BUTTONS
+  ========================= */
+
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-500
+           px-6 py-3 rounded-lg font-semibold transition;
+  }
+
+  .btn-outline {
+    @apply border-2 border-indigo-600
+           px-6 py-3 rounded-lg font-semibold
+           hover:bg-indigo-600 transition;
+  }
+
+  .btn-primary.big {
+    @apply px-8 py-4 text-lg;
+  }
+
+  /* =========================
+     GRID
+  ========================= */
+
+  .grid {
+    @apply grid gap-8
+           grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  /* =========================
+     FEATURES
+  ========================= */
+
+  .features {
+    @apply grid gap-10 text-center
+           grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .feature h3 {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  .feature p {
+    @apply text-slate-400 text-sm;
+  }
+
+  /* =========================
+     CTA SECTION
+  ========================= */
+
+  .cta-section {
+    @apply py-20 px-[10%] text-center
+           bg-gradient-to-br from-indigo-600 to-indigo-500;
+  }
+
+  .cta-section h2 {
+    @apply text-3xl font-bold mb-5;
+  }
+
+  .cta-section p {
+    @apply text-indigo-100 mb-8;
+  }
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  footer {
+    @apply py-10 px-[10%] text-center
+           bg-slate-950 text-slate-400 text-sm;
+  }
+
+}
