@@ -28,7 +28,7 @@ export default function Header() {
         {/* CTA BUTTON */}
         <div className="cta">
           <Link href="/upload" className="btn">
-            Upload 
+            Upload models
           </Link>
         </div>
 
